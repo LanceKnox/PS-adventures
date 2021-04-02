@@ -6,7 +6,7 @@ Set-PowerCLIConfiguration -InvalidCertificateAction Ignore -Confirm:$false -Part
 Import-Csv ",path to csv file with vmhosts>"| foreach {
 $VHost = $_.VHost
 
-#####Backup Host######
+#####Backup Host Config######
 Get-VMHostFirmware -VMHost $VHost -BackupConfiguration -DestinationPath <Path to where you want to store config backup>
 
 ###### Get Datastore from VMHost where name is like Store ######
