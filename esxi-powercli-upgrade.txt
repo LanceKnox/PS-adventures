@@ -3,7 +3,7 @@ Connect-VIServer -Server <vcenter server>
 Set-PowerCLIConfiguration -InvalidCertificateAction Ignore -Confirm:$false -ParticipateInCEIP: $false
 
 ###### Import Stores From CSV ######
-Import-Csv ",path to csv file with vmhosts>"| foreach {
+Import-Csv "<path to csv file with vmhosts>"| foreach {
 $VHost = $_.VHost
 
 #####Backup Host Config######
